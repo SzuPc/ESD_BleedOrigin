@@ -3,6 +3,6 @@ This is an academic paper project page template.
 
 ## Website Page
 
-- https://szupc.github.io/ESD_BPDT_website/
+- https://szupc.github.io/ESD_BPDT/
 
 
