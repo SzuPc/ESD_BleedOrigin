@@ -52,7 +52,7 @@
         <div class="container is-max-desktop">
           <div class="columns is-centered">
             <div class="column has-text-centered">
-              <h1 class="title is-1 publication-title">
+              <h1 class="title is-2 publication-title">
                 ESD-BPDT: Dual-Stage Detection-Tracking Framework for Dynamic Bleeding Point Localization in Endoscopic Submucosal Dissection
               </h1>
               <div class="is-size-5 publication-authors">
@@ -87,7 +87,7 @@
     </section>
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- Arxiv PDF link -->
+                         <!-- Arxiv PDF link 
                       <span class="link-block">
                         <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
@@ -97,8 +97,8 @@
                         <span>Paper</span>
                       </a>
                     </span>
-
-                    <!-- Supplementary PDF link -->
+                    -->
+                    <!-- Supplementary PDF link
                     <span class="link-block">
                       <a href="static/pdfs/supplementary_material.pdf" target="_blank"
                       class="external-link button is-normal is-rounded is-dark">
@@ -107,11 +107,12 @@
                       </span>
                       <span>Supplementary</span>
                     </a>
-                  </span>
+                  </span>  
+                    -->
 
                   <!-- Github link -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/XuMengyaAmy/ESD-BPDT" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -140,11 +141,10 @@
 
 
 <!-- Teaser video-->
-<section class="hero teaser">
+<!-- <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video poster="" id="tree" autoplay controls muted loop height="100%">
-        <!-- Your video here -->
         <source src="SzuPc/EndoControlMag.github.io/static/工具移动牵拉组织_x8_update_4_track_math.mp4"
         type="video/mp4">
       </video>
@@ -153,7 +153,7 @@
       </h2>
     </div>
   </div>
-</section>
+</section> -->
 <!-- End teaser video -->
 
 <!-- Paper abstract -->
@@ -164,13 +164,28 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
+            Intraoperative bleeding during Endoscopic Submucosal Dissection (ESD) presents critical challenges requiring precise bleeding point detection and continuous tracking. Existing methods mainly address region segmentation but overlook temporal tracking under complex visual conditions. We propose a dual-stage detection-tracking framework leveraging multi-domain features and gated attention for onset detection, combined with a pseudo-label enhanced tracking strategy using feature matching and Kalman filtering. We introduce the first comprehensive ESD bleeding point dataset with 1,771 annotated points over 106,222 frames. Our approach achieves 78.42% frame-level accuracy for onset detection and 61.28% pixel-level accuracy for tracking, outperforming state-of-the-art models and demonstrating strong clinical applicability for improving surgical safety.
           </p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Paper image -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <figure class="image is-3by2">
+          <img src="static/paper_image/motivation_method.jpg" alt="Motivation and Method Overview">
+          <figcaption class="has-text-centered is-size-6 mt-2">Overview of Motivation and Methodology.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- End paper abstract -->
 
 
