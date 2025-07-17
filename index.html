@@ -159,7 +159,7 @@
 
 
 <!-- Youtube video -->
-<section class="hero is-small is-light">
+<section id="motivation_part" class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
@@ -203,8 +203,8 @@
     <div class="columns is-centered">
       <div class="column is-full has-text-centered">
         <figure class="image is-3by2">
-          <img src="static/paper_image/motivation_method.jpg" alt="Motivation and Method Overview">
-          <figcaption class="has-text-centered is-size-6 mt-2">Overview of Motivation and Methodology.</figcaption>
+          <img src="static/paper_image/abstract_fig.png" alt="Motivation and Method Overview">
+          <figcaption class="has-text-centered is-size-6 mt-2">Overview of BleedOrigin.</figcaption>
         </figure>
       </div>
     </div>
@@ -212,7 +212,27 @@
 </section>
 
 
-
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <figure class="image is-3by2">
+          <img src="static/paper_image/motivation_method.jpg" alt="Motivation and Method Overview">
+          <figcaption class="has-text-centered is-size-6 mt-2">Overview of Motivation and Methodology.</figcaption>
+        </figure>
+        <p class="mt-4 is-size-6 has-text-grey-dark">
+          Overview of the Motivation and Methodology. (A) Motivation: persistent bleed-
+          ing obscures the surgical field, necessitating repeated flushing to achieve transient exposure
+          of bleeding sources. This iterative process significantly reduces surgical efficiency, prolongs
+          procedure time, and elevates patient risks, including perforation. A demonstration of this
+          issue is available in our supplementary video. (B) The proposed
+          method identifies the initial bleeding source and maintains robust real-time tracking un-
+          der dynamic visual challenges, ensuring continuous localization until successful hemostasis.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 <!-- Image carousel -->
@@ -252,11 +272,11 @@
 
 
 <div class="container">
-  <h2 class="title is-3 has-text-centered">Video Comparison</h2>
+  <h2 class="title is-3 has-text-centered">Visualization of six surgical scenarios</h2>
 
   <!-- 第一组 -->
   <div class="is-flex is-justify-content-center" style="gap: 40px; margin-bottom: 30px;">
-    <div>
+    <div id="challenge_vis">
       <h3 class="subtitle is-4 has-text-centered">Clear Bleeding View</h3>
       <div class="is-flex" style="gap: 10px;">
         <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
@@ -351,74 +371,6 @@
   </div>
 </div>
 
-
-
-
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3 has-text-centered">Video Carousel</h2>
-      <!-- Row 1: 3 Videos -->
-      <div class="columns is-centered">
-        <div class="column is-one-third">
-          <video poster="PATH_TO_VIDEO1_POSTER" id="video1" autoplay controls muted loop>
-            <source src="static/easy/Prostatectomy/正常_magxy_8_8_theta45_dynamic.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h3 class="subtitle has-text-centered">Video 1: Description</h3>
-        </div>
-        <div class="column is-one-third">
-          <video poster="PATH_TO_VIDEO2_POSTER" id="video2" autoplay controls muted loop>
-            <source src="static/easy/Prostatectomy/正常_x8_mag_D1_img.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h3 class="subtitle has-text-centered">Video 2: Description</h3>
-        </div>
-        <div class="column is-one-third">
-          <video poster="PATH_TO_VIDEO3_POSTER" id="video3" autoplay controls muted loop>
-            <source src="static/easy/Prostatectomy/正常_x8_mag_EVM.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h3 class="subtitle has-text-centered">Video 3: Description</h3>
-        </div>
-      </div>
-      <!-- Row 2: 3 Videos -->
-      <div class="columns is-centered">
-        <div class="column is-one-third">
-          <video poster="PATH_TO_VIDEO4_POSTER" id="video4" autoplay controls muted loop>
-            <source src="static/easy/Distal_Gastrectomy/正常_magxy_8_8_theta45_static.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h3 class="subtitle has-text-centered">Video 4: Description</h3>
-        </div>
-        <div class="column is-one-third">
-          <video poster="PATH_TO_VIDEO5_POSTER" id="video5" autoplay controls muted loop>
-            <source src="static/easy/Cholecystotomy/正常_x8_x8_dynamic_output.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h3 class="subtitle has-text-centered">Video 5: Description</h3>
-        </div>
-        <div class="column is-one-third">
-          <video poster="PATH_TO_VIDEO6_POSTER" id="video6" autoplay controls muted loop>
-            <source src="static/easy/Cholecystotomy/正常_x8_x8_dynamic_output.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h3 class="subtitle has-text-centered">Video 6: Description</h3>
-        </div>
-      </div>
-      <!-- Row 3: 1 Video -->
-      <div class="columns is-centered">
-        <div class="column is-one-third">
-          <video poster="PATH_TO_VIDEO7_POSTER" id="video7" autoplay controls muted loop>
-            <source src="static/easy/Cholecystotomy/正常_x8_mag_static.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          <h3 class="subtitle has-text-centered">Video 7: Description</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 
