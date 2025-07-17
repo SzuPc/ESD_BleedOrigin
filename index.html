@@ -251,68 +251,46 @@
 <!-- End image carousel -->
 
 
-<section class="section">
-  <div class="container">
-    <h2 class="title is-3 has-text-centered">Video Comparison</h2>
+<div class="container">
+  <h2 class="title is-3 has-text-centered">Video Comparison</h2>
 
-    <!-- Row: 6 videos grouped into two sets -->
-    <div class="columns is-multiline is-centered">
+  <!-- 两组并列视频 -->
+  <div class="is-flex is-justify-content-center" style="gap: 40px;">
 
-      <!-- Group 1 Title -->
-      <div class="column is-full has-text-centered">
-        <h3 class="subtitle is-4">Clear Bleeding View</h3>
-      </div>
-
-      <!-- Video 1 -->
-      <div class="column is-one-sixth">
-        <video autoplay muted loop controls>
+    <!-- 左边：Clear Bleeding View -->
+    <div>
+      <h3 class="subtitle is-4 has-text-centered">Clear Bleeding View</h3>
+      <div class="is-flex" style="gap: 10px;">
+        <video width="160" autoplay muted loop>
           <source src="static/challenge_video/clear_view/video_001.mp4" type="video/mp4">
         </video>
-      </div>
-
-      <!-- Video 2 -->
-      <div class="column is-one-sixth">
-        <video autoplay muted loop controls>
+        <video width="160" autoplay muted loop>
           <source src="static/challenge_video/clear_view/video_002.mp4" type="video/mp4">
         </video>
-      </div>
-
-      <!-- Video 3 -->
-      <div class="column is-one-sixth">
-        <video autoplay muted loop controls>
+        <video width="160" autoplay muted loop>
           <source src="static/challenge_video/clear_view/video_003.mp4" type="video/mp4">
         </video>
       </div>
+    </div>
 
-      <!-- Group 2 Title -->
-      <div class="column is-full has-text-centered" style="margin-top: 1rem;">
-        <h3 class="subtitle is-4">Obscure Bleeding View</h3>
-      </div>
-
-      <!-- Video 1 -->
-      <div class="column is-one-sixth">
-        <video autoplay muted loop controls>
+    <!-- 右边：Obscure Bleeding View -->
+    <div>
+      <h3 class="subtitle is-4 has-text-centered">Obscure Bleeding View</h3>
+      <div class="is-flex" style="gap: 10px;">
+        <video width="160" autoplay muted loop>
           <source src="static/challenge_video/bleeding_view/video_007.mp4" type="video/mp4">
         </video>
-      </div>
-
-      <!-- Video 2 -->
-      <div class="column is-one-sixth">
-        <video autoplay muted loop controls>
+        <video width="160" autoplay muted loop>
           <source src="static/challenge_video/bleeding_view/video_008.mp4" type="video/mp4">
         </video>
-      </div>
-
-      <!-- Video 3 -->
-      <div class="column is-one-sixth">
-        <video autoplay muted loop controls>
+        <video width="160" autoplay muted loop>
           <source src="static/challenge_video/bleeding_view/video_009.mp4" type="video/mp4">
         </video>
       </div>
     </div>
-  </div>
-</section>
 
+  </div>
+</div>
 
 
 
