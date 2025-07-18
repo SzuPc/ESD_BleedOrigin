@@ -163,7 +163,8 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Project Introduction</h2>
+      <h2 class="title is-3 has-text-centered">Project Introduction Video</h2>
+
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
@@ -238,6 +239,30 @@
 </section>
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full has-text-centered">
+        <h2 class="title is-3 mb-4">Motivation and Method Overview</h2>
+        <figure class="image is-3by2">
+          <img src="static/paper_image/dataset_overview.jpg" alt="Motivation and Method Overview">
+          <figcaption class="has-text-centered is-size-6 mt-2">Overview of Motivation and Methodology.</figcaption>
+        </figure>
+        <p class="mt-4 is-size-6 has-text-grey-dark">
+          We selected 485 bleeding video
+          clips from 44 patients for analysis, processed in two stages: (1) initial bleeding frame and
+          bleeding source detection, and (2) subsequent bleeding source tracking. The resulting
+          datasets include: A. Detection set: 66, 896 frames with 485 bleeding time points; B.
+          Tracking set: 1,771 frames with manually annotated bleeding sources and an additional
+          39,755 frames augmented with bleeding source pseudo-labels; C. The dataset features
+          anatomical diversity: 8 sites (gastric antrum, duodenum, etc.); D. clinical challenges: 6
+          scenarios (obscured bleeding views, camera jitter, water flushing, etc.)
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- Image carousel -->
 <!-- <section class="hero is-small">
   <div class="hero-body">
@@ -275,20 +300,20 @@
 
 
 <div class="container">
-  <h2 class="title is-3 has-text-centered">Visualization of six surgical scenarios</h2>
+  <h2 class="title is-3 has-text-centered">Visualize the Prediction Results on 6 Surgical Scenarios</h2>
 
   <!-- 第一组 -->
   <div class="is-flex is-justify-content-center" style="gap: 40px; margin-bottom: 30px;">
     <div id="challenge_vis">
       <h3 class="subtitle is-4 has-text-centered">Clear Bleeding View</h3>
       <div class="is-flex" style="gap: 10px;">
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/clear_view/video_001.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+              <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/clear_view/video_002.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/clear_view/video_003.mp4" type="video/mp4">
         </video>
       </div>
@@ -296,13 +321,13 @@
     <div>
       <h3 class="subtitle is-4 has-text-centered">Obscure Bleeding View</h3>
       <div class="is-flex" style="gap: 10px;">
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/bleeding_view/video_007.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/bleeding_view/video_008.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/bleeding_view/video_009.mp4" type="video/mp4">
         </video>
       </div>
@@ -314,13 +339,13 @@
     <div>
       <h3 class="subtitle is-4 has-text-centered">Light Reflection</h3>
       <div class="is-flex" style="gap: 10px;">
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/reflection/video_016.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/reflection/video_017.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/reflection/video_018.mp4" type="video/mp4">
         </video>
       </div>
@@ -328,13 +353,13 @@
     <div>
       <h3 class="subtitle is-4 has-text-centered">Water Flushing</h3>
       <div class="is-flex" style="gap: 10px;">
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/water/video_013.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/water/video_014.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/water/video_015.mp4" type="video/mp4">
         </video>
       </div>
@@ -346,13 +371,13 @@
     <div>
       <h3 class="subtitle is-4 has-text-centered">Camera Jitter</h3>
       <div class="is-flex" style="gap: 10px;">
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/camera/video_010.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/camera/video_011.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/camera/video_012.mp4" type="video/mp4">
         </video>
       </div>
@@ -360,13 +385,13 @@
     <div>
       <h3 class="subtitle is-4 has-text-centered">Instrument Interference</h3>
       <div class="is-flex" style="gap: 10px;">
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/instrument/video_004.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/instrument/video_005.mp4" type="video/mp4">
         </video>
-        <video autoplay muted loop playsinline style="height:160px; object-fit: cover;">
+        <video autoplay muted loop playsinline style="width: 180px; height: 160px; object-fit: cover;">
           <source src="static/challenge_video/instrument/video_007.mp4" type="video/mp4">
         </video>
       </div>
