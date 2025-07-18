@@ -202,7 +202,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Intraoperative bleeding during Endoscopic Submucosal Dissection (ESD) presents critical challenges requiring precise bleeding point detection and continuous tracking. Existing methods mainly address region segmentation but overlook temporal tracking under complex visual conditions. We propose a dual-stage detection-tracking framework leveraging multi-domain features and gated attention for onset detection, combined with a pseudo-label enhanced tracking strategy using feature matching and Kalman filtering. We introduce the first comprehensive ESD bleeding point dataset with 1,771 annotated points over 106,222 frames. Our approach achieves 78.42% frame-level accuracy for onset detection and 61.28% pixel-level accuracy for tracking, outperforming state-of-the-art models and demonstrating strong clinical applicability for improving surgical safety.
+            Intraoperative bleeding during Endoscopic Submucosal Dissection (ESD) presents critical challenges requiring precise bleeding source detection and continuous tracking. Existing methods mainly address region segmentation but overlook temporal tracking under complex visual conditions. We propose a dual-stage detection-tracking framework leveraging multi-domain features and gated attention for onset detection, combined with a pseudo-label enhanced tracking strategy using feature matching and Kalman filtering. We introduce the first comprehensive ESD bleeding source dataset with 1,771 annotated sources over 106,222 frames. Our approach achieves 78.42% frame-level accuracy for onset detection and 61.28% pixel-level accuracy for tracking, outperforming state-of-the-art models and demonstrating strong clinical applicability for improving surgical safety.
           </p>
         </div>
       </div>
@@ -295,13 +295,11 @@
 <!-- End image carousel -->
 
 
-
-
 <div class="is-flex is-justify-content-center" style="margin-bottom: 40px;">
-  <div id="challenge_vis" style="width: 560px;">
+  <div id="long_video_vis" style="max-width: 1000px; width: 100%;">
     
     <!-- 标题 -->
-    <h3 class="subtitle is-4 has-text-centered" style="margin-bottom: 15px;">Clear Bleeding View</h3>
+    <h2 class="title is-3 mb-4">Visualizing the prediction and GT of bleed source tracking in long videos</h2>
     
     <!-- 三个视频横向排列 -->
     <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
@@ -318,7 +316,7 @@
     
     <!-- 描述文字 -->
     <p class="has-text-centered is-size-6 has-text-grey-dark">
-      Bleeding is effectively cleared using water jets, revealing the bleeding point and improving visual clarity for precise operations.
+      Bleeding is effectively cleared using water jets, revealing the bleeding source and improving visual clarity for precise operations.
     </p>
     
   </div>
