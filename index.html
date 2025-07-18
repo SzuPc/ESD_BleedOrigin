@@ -295,34 +295,6 @@
 <!-- End image carousel -->
 
 
-<div class="is-flex is-justify-content-center" style="margin-bottom: 40px;">
-  <div id="long_video_vis" style="max-width: 1000px; width: 100%;">
-    
-    <!-- 标题 -->
-    <h2 class="title is-3 mb-4">Visualizing the prediction and GT of bleed source tracking in long videos</h2>
-    
-    <!-- 三个视频横向排列 -->
-    <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
-      <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
-        <source src="static/long_video/video_001.mp4" type="video/mp4">
-      </video>
-      <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
-        <source src="static/long_video/video_002.mp4" type="video/mp4">
-      </video>
-      <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
-        <source src="static/long_video/video_003.mp4" type="video/mp4">
-      </video>
-    </div>
-    
-    <!-- 描述文字 -->
-    <p class="has-text-centered is-size-6 has-text-grey-dark">
-      Bleeding is effectively cleared using water jets, revealing the bleeding source and improving visual clarity for precise operations.
-    </p>
-    
-  </div>
-</div>
-
-
 
 <div class="container">
   <h2 class="title is-3 has-text-centered">Visualize the Prediction Results on 6 Surgical Scenarios</h2>
@@ -426,7 +398,92 @@
 
 
 
+<div class="is-flex is-justify-content-center" style="margin-bottom: 40px;">
+  <div id="long_video_vis" style="max-width: 1000px; width: 100%;">
+    
+    <!-- 标题 -->
+    <h2 class="title is-3 mb-4 has-text-centered">Visualizing the Prediction and GT of Bleeding Source Tracking in Long Videos</h2>
+    
+    <!-- 三个视频横向排列 -->
+    <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
+      <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
+        <source src="static/long_video/video_001.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
+        <source src="static/long_video/video_002.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
+        <source src="static/long_video/video_003.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <!-- 描述文字 -->
+    <p class="has-text-centered is-size-6 has-text-grey-dark">
+      Visualize our detection and tracking results on a complete ESD video (video length > 10s), and the doctor annotates the bleeding point labels at 30fps. 
+      <span style="color: #1717ce;">Blue is GT</span>, and <span style="color: #03fd3d;">green is our predicted result</span>. 
+      Our algorithm can cope with a variety of challenges and maintain high robustness.
+    </p>
+      
+  </div>
+</div>
 
+<<div class="is-flex is-justify-content-center" style="margin-bottom: 40px;">
+  <div id="long_video_vis" style="max-width: 1320px; width: 100%;">
+    
+    <!-- 标题 -->
+    <h2 class="title is-3 mb-4 has-text-centered">Visualizing the Prediction and GT of Bleeding Source Tracking in Long Videos</h2>
+    
+    <!-- 上排4个视频和描述 -->
+    <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
+      
+      <!-- 视频+描述1 -->
+      <div style="display: flex; flex-direction: column; align-items: center; width: 320px;">
+        <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
+          <source src="static/restart_video/error_video.mp4" type="video/mp4">
+        </video>
+        <p class="is-size-6 has-text-centered mt-2">Original Results</p>
+      </div>
+      
+      <!-- 视频+描述2 -->
+      <div style="display: flex; flex-direction: column; align-items: center; width: 320px;">
+        <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
+          <source src="static/restart_video/vis_smooth_30.mp4" type="video/mp4">
+        </video>
+        <p class="is-size-6 has-text-centered mt-2">Restart each 30 frames</p>
+      </div>
+      
+      <!-- 视频+描述3 -->
+      <div style="display: flex; flex-direction: column; align-items: center; width: 320px;">
+        <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
+          <source src="static/restart_video/vis_smooth_60.mp4" type="video/mp4">
+        </video>
+        <p class="is-size-6 has-text-centered mt-2">Restart each 60 frames</p>
+      </div>
+      
+      <!-- 视频+描述4 -->
+      <div style="display: flex; flex-direction: column; align-items: center; width: 320px;">
+        <video autoplay muted loop playsinline style="width: 320px; height: 280px; object-fit: cover;">
+          <source src="static/restart_video/vis_smooth_90.mp4" type="video/mp4">
+        </video>
+        <p class="is-size-6 has-text-centered mt-2">Restart each 390 frames</p>
+      </div>
+      
+    </div>
+    
+    <!-- 下排1个视频，宽度是上面4个视频宽度总和 + 3个gap宽度 -->
+    <div style="margin-bottom: 15px;">
+      <video autoplay muted loop playsinline style="width: calc(4 * 320px + 3 * 10px); height: 280px; object-fit: cover;">
+        <source src="static/long_video/video_005.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <!-- 描述文字 -->
+    <p class="has-text-centered is-size-6 has-text-grey-dark">
+      Frame-wise pixel error of bleeding source tracking under different memory refresh intervals.
+    </p>
+    
+  </div>
+</div>
 
 
 
