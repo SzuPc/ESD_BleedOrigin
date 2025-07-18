@@ -44,7 +44,19 @@
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
 </head>
+
+
 <body>
+  <nav class="navbar is-light" style="position: sticky; top: 0; z-index: 10;">
+    <div class="navbar-menu is-active" style="justify-content: center;">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#motivation_part">Project Video</a>
+        <a class="navbar-item" href="#motivation">Motivation</a>
+        <a class="navbar-item" href="#dataset">Dataset</a>
+        <a class="navbar-item" href="#challenge_vis">Result</a>
+      </div>
+    </div>
+  </nav>
 
 
      <section class="hero">
@@ -226,7 +238,7 @@
 <!-- End paper abstract -->
 
 
-<section class="section">
+<section class="section" id="motivation">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full has-text-centered">
@@ -249,7 +261,7 @@
 </section>
 
 
-<section class="section is-light">
+<section class="section is-light" id="dataset">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-full has-text-centered">
@@ -443,7 +455,7 @@
 
 
 <<div class="is-flex is-justify-content-center is-light" style="margin-bottom: 40px;">
-  <div id="long_video_vis" style="max-width: 1320px; max-height: 480px;">
+  <div id="update_memory" style="max-width: 1320px;">
     
     <!-- 标题 -->
     <h2 class="title is-3 mb-4 has-text-centered">Visualize the Prediction of Restarting the Memory Module at Different Frames</h2>
@@ -494,7 +506,9 @@
 
     <!-- 描述文字 -->
     <p class="has-text-centered is-size-6 has-text-grey-dark">
-      Frame-wise pixel error of bleeding source tracking under different memory refresh intervals.
+      Qualitative comparison of bleeding source tracking with different memory refresh intervals. 
+      <span style="color: #1717ce;">Blue is GT</span>, and <span style="color: #03fd3d;">green is our predicted result</span>. 
+      We also show the error values in the corresponding frames at different update frequencies.
     </p>
     
   </div>
