@@ -60,30 +60,31 @@
   </nav>
 
   <!-- 背景视频容器 -->
-  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
-    <video autoplay loop muted playsinline
-      style="width: 100vw; height: 100vh; object-fit: cover;">
-      <source src="static/bg_video/bg_video_compressed.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
+  <video autoplay loop muted playsinline
+    style="width: 100vw; height: 100vh; object-fit: cover;">
+    <source src="static/bg_video/bg_video_compressed.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 
-    <!-- 只在左右两侧添加半透明遮罩，中间区域不遮挡 -->
-    <div style="
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(to right,
-                  rgba(255, 255, 255, 0.7) 0%,
-                  rgba(255, 255, 255, 0.7) 20%,
-                  rgba(255, 255, 255, 0.0) 40%,
-                  rgba(255, 255, 255, 0.0) 60%,
-                  rgba(255, 255, 255, 0.7) 80%,
-                  rgba(255, 255, 255, 0.7) 100%);
-      pointer-events: none;
-    ">
-    </div>
+  <!-- 只在左右两侧添加半透明遮罩，中间区域不遮挡 -->
+  <div style="
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right,
+                rgba(255, 255, 255, 0.7) 0%,
+                rgba(255, 255, 255, 0.7) 20%,
+                rgba(255, 255, 255, 0.0) 40%,
+                rgba(255, 255, 255, 0.0) 60%,
+                rgba(255, 255, 255, 0.7) 80%,
+                rgba(255, 255, 255, 0.7) 100%);
+    pointer-events: none;
+  ">
   </div>
+</div>
+
 
      <section class="hero">
       <div class="hero-body">
