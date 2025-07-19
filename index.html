@@ -186,7 +186,7 @@
           <div class="publication-video">
             <!-- Vimeo embed code -->
             <iframe
-              src="https://player.vimeo.com/video/1102438395"
+              src="https://player.vimeo.com/video/1102705812"
               width="100%"
               height="500"
               frameborder="0"
@@ -247,13 +247,10 @@
           <img src="static/paper_image/motivation_method.png" alt="Motivation and Method Overview">
         </figure>
         <p class="mt-4 is-size-6 has-text-grey-dark">
-          Overview of the Motivation and Methodology. (A) Motivation: persistent bleed-
-          ing obscures the surgical field, necessitating repeated flushing to achieve transient exposure
-          of bleeding sources. This iterative process significantly reduces surgical efficiency, prolongs
-          procedure time, and elevates patient risks, including perforation. A demonstration of this
-          issue is available in our supplementary video. (B) The proposed
-          method identifies the initial bleeding source and maintains robust real-time tracking un-
-          der dynamic visual challenges, ensuring continuous localization until successful hemostasis.
+          Intraoperative bleeding during Endoscopic Submucosal Dissection (ESD) poses significant risks, demanding precise, real-time localization and continuous monitoring of the bleeding source for effective hemostatic intervention. Current computational methods primarily focus on bleeding region segmentation, overlooking the critical need for accurate bleeding source detection and temporal tracking in the challenging ESD environment, which is marked by frequent visual obstructions and dynamic scene changes. This gap is further widened by the lack of specialized datasets, hindering the development of robust AI-assisted guidance systems.
+          To address these challenges, we introduce BleedOrigin-Bench, the first comprehensive ESD bleeding source dataset, featuring 1,771 expert-annotated bleeding sources across 106,222 frames from 44 procedures, supplemented with 39,755 pseudo-labeled frames. This benchmark covers 8 anatomical sites and 6 challenging clinical scenarios.
+          We also present BleedOrigin-Net, a novel dual-stage detection-tracking framework for bleeding source localization in ESD procedures, addressing the complete workflow from bleeding onset detection to continuous spatial tracking. For initial detection, our method integrates a Multi-Domain Confidence-based Frame Memory (MDCFM) module that leverages RGB, HSV, and optical flow features for robust temporal context, combined with Multi-Domain Gated Attention (MDG) for superior onset detection. For continuous tracking, we employ a pseudo-label enhanced strategy that incorporates feature matching, trajectory prediction, and Kalman filtering to generate dense supervision from sparse annotations, complemented by parameter-efficient LoRA fine-tuning.          
+          We compare our approach with widely-used object detection models (YOLOv11/v12), multimodal large language models, and point tracking methods. Extensive evaluation demonstrates state-of-the-art performance, achieving: 96.85% frame-level accuracy (± ≤ 8 frames) for bleeding onset detection；70.24% pixel-level accuracy (≤ 100 px) for initial source detection；96.11% pixel-level accuracy (≤ 100 px) for point tracking.
         </p>
       </div>
     </div>
@@ -515,6 +512,70 @@
 </div>
 
 
+<div style="height: 60px;"></div>
+
+<div class="is-flex is-justify-content-center" style="margin-bottom: 40px;">
+  <div id="long_video_vis" style="max-width: 1000px; width: 100%;">
+    
+    <!-- 标题 -->
+    <h2 class="title is-3 mb-4 has-text-centered">Visualizing the Prediction and GT of Bleeding Source Tracking in Long Videos</h2>
+    
+    <!-- 三个视频横向排列 -->
+    <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
+      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+        <source src="static/long_video/video_001.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+        <source src="static/long_video/video_002.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+        <source src="static/long_video/video_003.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <!-- 描述文字 -->
+    <p class="has-text-centered is-size-6 has-text-grey-dark">
+      Visualize our detection and tracking results on a complete ESD video (video length > 10s), and the doctor annotates the bleeding point labels at 30fps. 
+      <span style="color: #1717ce;">Blue is GT</span>, and <span style="color: #03fd3d;">green is our predicted result</span>. 
+      Our algorithm can cope with a variety of challenges and maintain high robustness.
+    </p>
+      
+  </div>
+</div>
+
+
+<div style="height: 60px;"></div>
+
+<div class="is-flex is-justify-content-center" style="margin-bottom: 40px;">
+  <div id="deployment_results" style="max-width: 1000px; width: 100%;">
+    
+    <!-- 标题 -->
+    <h2 class="title is-3 mb-4 has-text-centered">Visualize the Results of the Deployment Experiment</h2>
+    
+    <!-- 三个视频横向排列 -->
+    <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
+      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+        <source src="static/deployment_results/3.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+        <source src="static/deployment_results/1.mp4" type="video/mp4">
+      </video>
+      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+        <source src="static/deployment_results/2.mp4" type="video/mp4">
+      </video>
+    </div>
+    
+    <!-- 描述文字 -->
+    <p class="has-text-centered is-size-6 has-text-grey-dark">
+      We selected three complete videos from a clean field of view to bleeding for the deployment experiment. During the transition from the non-bleeding phase to the bleeding phase, the non-bleeding status is indicated by a <span style="color: #15ff00;">"Non Bleeding"</span> label displayed in the upper-left corner. Upon entering the bleeding phase, the bleeding source is detected and highlighted by a pulsating <span style="color: #df0808;">red bounding box</span> to draw the clinician's attention to the bleeding source. 
+      (i) Low Difficulty: gentle water flushing, rapid dynamic visual field variations;
+      (ii) Moderate Difficulty: visibility is degraded by smoke and light reflection, with gentle water flushing present;
+      (iii) High Difficulty: copious water flushing causing field contamination;
+    </p>
+      
+  </div>
+  
+</div>
 
 
 
