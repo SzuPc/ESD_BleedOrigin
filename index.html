@@ -59,16 +59,30 @@
     </div>
   </nav>
 
-  <video autoplay loop muted playsinline
-    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
-  <source src="static/bg_video/bg_video_compressed.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-  </video>
-  <div style="
-    position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-    z-index: -1;">
+  <!-- 背景视频容器 -->
+  <div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
+    <video autoplay loop muted playsinline
+      style="width: 100vw; height: 100vh; object-fit: cover;">
+      <source src="static/bg_video/bg_video_compressed.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <!-- 只在左右两侧添加半透明遮罩，中间区域不遮挡 -->
+    <div style="
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to right,
+                  rgba(255, 255, 255, 0.7) 0%,
+                  rgba(255, 255, 255, 0.7) 20%,
+                  rgba(255, 255, 255, 0.0) 40%,
+                  rgba(255, 255, 255, 0.0) 60%,
+                  rgba(255, 255, 255, 0.7) 80%,
+                  rgba(255, 255, 255, 0.7) 100%);
+      pointer-events: none;
+    ">
+    </div>
   </div>
 
      <section class="hero">
@@ -557,36 +571,45 @@
 
 <div style="height: 60px;"></div>
 
-<div class="is-flex is-justify-content-center" style="margin-bottom: 40px;">
-  <div id="deployment_results" style="max-width: 1000px; width: 100%;">
-    
-    <!-- 标题 -->
-    <h2 class="title is-3 mb-4 has-text-centered">Visualize the Results of the Deployment Experiment</h2>
-    
-    <!-- 三个视频横向排列 -->
-    <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
+<!-- 容器，包住视频和描述 -->
+<div style="margin-bottom: 20px;">
+
+  <!-- 三个视频横向排列 -->
+  <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
+    <div style="text-align: center;">
       <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
         <source src="static/deployment_video/3.mp4" type="video/mp4">
       </video>
+      <p style="margin-top: 5px; font-size: 14px; color: #333;">Low Difficulty</p>
+    </div>
+    <div style="text-align: center;">
       <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
         <source src="static/deployment_video/1.mp4" type="video/mp4">
       </video>
+      <p style="margin-top: 5px; font-size: 14px; color: #333;">Moderate Difficulty</p>
+    </div>
+    <div style="text-align: center;">
       <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
         <source src="static/deployment_video/2.mp4" type="video/mp4">
       </video>
+      <p style="margin-top: 5px; font-size: 14px; color: #333;">High Difficulty</p>
     </div>
-    
-    <!-- 描述文字 -->
-    <p class="has-text-centered is-size-6 has-text-grey-dark">
-      We selected three complete videos from a clean field of view to bleeding for the deployment experiment. During the transition from the non-bleeding phase to the bleeding phase, the non-bleeding status is indicated by a <span style="color: #15ff00;">"Non Bleeding"</span> label displayed in the upper-left corner. Upon entering the bleeding phase, the bleeding source is detected and highlighted by a pulsating <span style="color: #df0808;">red bounding box</span> to draw the clinician's attention to the bleeding source. 
-      (i) Low Difficulty: gentle water flushing, rapid dynamic visual field variations;
-      (ii) Moderate Difficulty: visibility is degraded by smoke and light reflection, with gentle water flushing present;
-      (iii) High Difficulty: copious water flushing causing field contamination;
-    </p>
-      
   </div>
 
+  <!-- 描述文字（与三个视频逻辑绑定） -->
+  <p class="has-text-centered is-size-6 has-text-grey-dark">
+    We selected three complete videos from a clean field of view to bleeding for the deployment experiment.
+    During the transition from the non-bleeding phase to the bleeding phase, the non-bleeding status is
+    indicated by a <span style="color: #15ff00;">"Non Bleeding"</span> label displayed in the upper-left corner.
+    Upon entering the bleeding phase, the bleeding source is detected and highlighted by a pulsating
+    <span style="color: #df0808;">red bounding box</span> to draw the clinician's attention to the bleeding source. <br><br>
+    (i) <strong>Low Difficulty</strong>: Even with subtle bleeding, our model achieves timely detection via flashing red alerts and maintains accurate tracking despite rapid visual field changes;<br>
+    (ii) <strong>Moderate Difficulty</strong>: Despite visibility degradation from smoke, light reflection, and gentle flushing, the model maintains both timely bleeding onset detection and stable bleeding source tracking;<br>
+    (iii) <strong>High Difficulty</strong>: Tracking points may drift during copious flushing, but our memory refresh strategy enables bleeding source reidentification when visual features reappear post-flushing.
+  </p>
+
 </div>
+
 
 
 
