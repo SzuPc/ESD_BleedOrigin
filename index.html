@@ -59,32 +59,17 @@
     </div>
   </nav>
 
-  <!-- 背景视频容器 -->
-<div style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden;">
   <video autoplay loop muted playsinline
-    style="width: 100vw; height: 100vh; object-fit: cover;">
-    <source src="static/bg_video/bg_video_compressed.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+  <source src="static/bg_video/bg_video_compressed.mp4" type="video/mp4">
+  Your browser does not support the video tag.
   </video>
-
-  <!-- 只在左右两侧添加半透明遮罩，中间区域不遮挡 -->
   <div style="
     position: absolute;
-    top: 0; left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(to right,
-                rgba(255, 255, 255, 0.7) 0%,
-                rgba(255, 255, 255, 0.7) 20%,
-                rgba(255, 255, 255, 0.0) 40%,
-                rgba(255, 255, 255, 0.0) 60%,
-                rgba(255, 255, 255, 0.7) 80%,
-                rgba(255, 255, 255, 0.7) 100%);
-    pointer-events: none;
-  ">
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;">
   </div>
-</div>
-
 
      <section class="hero">
       <div class="hero-body">
@@ -576,25 +561,23 @@
 <div style="margin-bottom: 20px;">
 
   <!-- 三个视频横向排列 -->
-  <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 10px;">
-    <div style="text-align: center;">
-      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
-        <source src="static/deployment_video/3.mp4" type="video/mp4">
-      </video>
-      <p style="margin-top: 5px; font-size: 14px; color: #333;">Low Difficulty</p>
-    </div>
-    <div style="text-align: center;">
-      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
-        <source src="static/deployment_video/1.mp4" type="video/mp4">
-      </video>
-      <p style="margin-top: 5px; font-size: 14px; color: #333;">Moderate Difficulty</p>
-    </div>
-    <div style="text-align: center;">
-      <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
-        <source src="static/deployment_video/2.mp4" type="video/mp4">
-      </video>
-      <p style="margin-top: 5px; font-size: 14px; color: #333;">High Difficulty</p>
-    </div>
+  <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 6px;">
+    <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+      <source src="static/deployment_video/3.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+      <source src="static/deployment_video/1.mp4" type="video/mp4">
+    </video>
+    <video autoplay muted loop playsinline style="width: 280px; height: 240px; object-fit: cover;">
+      <source src="static/deployment_video/2.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- 难度标签横排 -->
+  <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 20px;">
+    <p style="width: 280px; text-align: center; font-size: 14px; color: #333;">Low Difficulty</p>
+    <p style="width: 280px; text-align: center; font-size: 14px; color: #333;">Moderate Difficulty</p>
+    <p style="width: 280px; text-align: center; font-size: 14px; color: #333;">High Difficulty</p>
   </div>
 
   <!-- 描述文字（与三个视频逻辑绑定） -->
@@ -610,8 +593,6 @@
   </p>
 
 </div>
-
-
 
 
 <!--BibTex citation -->
