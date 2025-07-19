@@ -558,7 +558,7 @@
 <div style="height: 60px;"></div>
 
 <!-- 容器，包住视频和描述 -->
-<div style="margin-bottom: 20px;">
+<div id="long_video_vis" style="max-width: 1000px; width: 100%; margin: 0 auto;">
 
   <!-- 三个视频横向排列 -->
   <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 6px;">
@@ -573,14 +573,14 @@
     </video>
   </div>
 
-  <!-- 难度标签横排 -->
+  <!-- 难度标签 -->
   <div class="is-flex is-justify-content-space-between" style="gap: 10px; margin-bottom: 20px;">
     <p style="width: 280px; text-align: center; font-size: 14px; color: #333;">Low Difficulty</p>
     <p style="width: 280px; text-align: center; font-size: 14px; color: #333;">Moderate Difficulty</p>
     <p style="width: 280px; text-align: center; font-size: 14px; color: #333;">High Difficulty</p>
   </div>
 
-  <!-- 描述文字（与三个视频逻辑绑定） -->
+  <!-- 描述文字 -->
   <p class="has-text-centered is-size-6 has-text-grey-dark">
     We selected three complete videos from a clean field of view to bleeding for the deployment experiment.
     During the transition from the non-bleeding phase to the bleeding phase, the non-bleeding status is
@@ -593,6 +593,7 @@
   </p>
 
 </div>
+
 
 
 <!--BibTex citation -->
