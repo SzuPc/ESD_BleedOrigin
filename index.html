@@ -54,79 +54,127 @@
 "></div>
 
 
-<!-- 白色背景的标题区域 -->
-<section class="hero" style="background-color: white; padding-top: 40px; padding-bottom: 40px;">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
+<body>
+  <nav class="navbar is-light" style="position: sticky; top: 0; z-index: 10;">
+    <div class="navbar-menu is-active" style="justify-content: center;">
+      <div class="navbar-start">
+        <a class="navbar-item" href="#motivation_part">Project Video</a>
+        <a class="navbar-item" href="#motivation">Motivation</a>
+        <a class="navbar-item" href="#dataset">Dataset</a>
+        <a class="navbar-item" href="#challenge_vis">Experiment Result</a>
+        <a class="navbar-item" href="#deployment_results">Deployment Result</a>
+      </div>
+    </div>
+  </nav>
 
-          <!-- 标题 -->
-          <h1 class="title is-2 publication-title" style="color: #000000;">
-            BleedOrigin: Dynamic Bleeding Source Localization in Endoscopic Submucosal Dissection via Dual-Stage Detection and Tracking
-          </h1>
+  <video autoplay loop muted playsinline
+    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+  <source src="static/bg_video/bg_video_compressed.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+  </video>
+  <div style="
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: -1;">
+  </div>
 
-          <!-- 作者 -->
-          <div class="is-size-5 publication-authors" style="color: #000000;">
-            <span class="author-block">Mengya Xu<sup>*</sup>,</span>
-            <span class="author-block">Rulin Zhou<sup>*</sup>,</span>
-            <span class="author-block">An Wang<sup>*</sup>,</span>
-            <span class="author-block">Chaoyang Lyu,</span>
-            <span class="author-block">Zhen Li,</span>
-            <span class="author-block">Yiting Chang,</span>
-            <span class="author-block">Ning Zhong,</span>
-            <span class="author-block">Hongliang Ren<sup>†</sup></span>
-          </div>
+     <section class="hero">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered" style="background-color: white; padding: 30px 40px; border-radius: 8px;">
 
-          <!-- 项目信息 -->
-          <div class="is-size-6 has-text-centered" style="margin: 6px 0 6px 0; color: #000000;">
-            Mengya Xu is the project leader.
-          </div>
+              <h1 class="title is-2 publication-title" style="color: #000000;">
+                BleedOrigin: Dynamic Bleeding Source Localization in Endoscopic Submucosal Dissection via Dual-Stage Detection and Tracking
+              </h1>
+              <div class="is-size-5 publication-authors" style="color: #000000;">
+                <!-- Paper authors -->
+                <span class="author-block">Mengya Xu<sup>*</sup>,</span>
+                <span class="author-block">Rulin Zhou<sup>*</sup>,</span>
+                <span class="author-block">An Wang<sup>*</sup>,</span>
+                <span class="author-block">Chaoyang Lyu,</span>
+                <span class="author-block">Zhen Li,</span>
+                <span class="author-block">Yiting Chang,</span>
+                <span class="author-block">Ning Zhong,</span>
+                <span class="author-block">Hongliang Ren<sup>†</sup></span>
+              </div>
 
-          <!-- 单位信息 -->
-          <div class="is-size-5 publication-authors" style="color: #000000;">
-            <span class="author-block">
-              The Chinese University of Hong Kong;<br>
-              CUHK Shenzhen Research Institute;<br>
-              Qilu Hospital of Shandong University;
-            </span>
-            <span class="eql-cntrb">
-              <small><br><sup>*</sup>Indicates Equal Contribution</small>
-            </span>
-            <span class="eql-cntrb">
-              <small><sup>†</sup>Corresponding Author</small>
-            </span>
-          </div>
-
-          <!-- 论文链接按钮 -->
-          <div class="publication-links" style="margin-top: 16px;">
-            <span class="link-block">
-              <a href="https://github.com/XuMengyaAmy/ESD-BPDT" target="_blank"
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="fab fa-github"></i>
+              <div class="is-size-6 has-text-centered" style="margin: 6px 0 6px 0; color: #000000;">
+                Mengya Xu is the project leader.
+              </div>
+    
+              <div class="is-size-5 publication-authors" style="color: #000000;">
+                <span class="author-block">
+                  The Chinese University of Hong Kong;<br>
+                  CUHK Shenzhen Research Institute;<br>
+                  Qilu Hospital of Shandong University;<br>
                 </span>
-                <span>Code</span>
-              </a>
-            </span>
-
-            <span class="link-block">
-              <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                 class="external-link button is-normal is-rounded is-dark">
-                <span class="icon">
-                  <i class="ai ai-arxiv"></i>
+                <span class="eql-cntrb">
+                  <small><br><sup>*</sup>Indicates Equal Contribution</small>
                 </span>
-                <span>arXiv</span>
-              </a>
-            </span>
+                <span class="eql-cntrb">
+                  <small><sup>†</sup>Corresponding Author</small>
+                </span>
+              </div>
+            </div>
           </div>
+        </div>
+      </div>
+    </section>
+                  <div class="column has-text-centered">
+                    <div class="publication-links">
+                         <!-- Arxiv PDF link 
+                      <span class="link-block">
+                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        class="external-link button is-normal is-rounded is-dark">
+                        <span class="icon">
+                          <i class="fas fa-file-pdf"></i>
+                        </span>
+                        <span>Paper</span>
+                      </a>
+                    </span>
+                    -->
+                    <!-- Supplementary PDF link
+                    <span class="link-block">
+                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                      class="external-link button is-normal is-rounded is-dark">
+                      <span class="icon">
+                        <i class="fas fa-file-pdf"></i>
+                      </span>
+                      <span>Supplementary</span>
+                    </a>
+                  </span>  
+                    -->
 
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/XuMengyaAmy/ESD-BPDT" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-
 
 
 <!-- Teaser video-->
