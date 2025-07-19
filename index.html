@@ -99,7 +99,7 @@
                 <span class="author-block">
                   The Chinese University of Hong Kong;<br>
                   CUHK Shenzhen Research Institute;<br>
-                  Department of Gastroenterology, Qilu Hospital of Shandong University;<br>
+                  Qilu Hospital of Shandong University;<br>
                 </span>
                 <span class="eql-cntrb">
                   <small><br><sup>*</sup>Indicates Equal Contribution</small>
@@ -239,8 +239,10 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Intraoperative bleeding during Endoscopic Submucosal Dissection (ESD) presents critical challenges requiring precise bleeding source detection and continuous tracking. Existing methods mainly address region segmentation but overlook temporal tracking under complex visual conditions. We propose a dual-stage detection-tracking framework leveraging multi-domain features and gated attention for onset detection, combined with a pseudo-label enhanced tracking strategy using feature matching and Kalman filtering. We introduce the first comprehensive ESD bleeding source dataset with 1,771 annotated sources over 106,222 frames. Our approach achieves 78.42% frame-level accuracy for onset detection and 61.28% pixel-level accuracy for tracking, outperforming state-of-the-art models and demonstrating strong clinical applicability for improving surgical safety.
-          </p>
+            Intraoperative bleeding during Endoscopic Submucosal Dissection (ESD) poses significant risks, demanding precise, real-time localization and continuous monitoring of the bleeding source for effective hemostatic intervention. Current computational methods primarily focus on bleeding region segmentation, overlooking the critical need for accurate bleeding source detection and temporal tracking in the challenging ESD environment, which is marked by frequent visual obstructions and dynamic scene changes. This gap is further widened by the lack of specialized datasets, hindering the development of robust AI-assisted guidance systems.
+            To address these challenges, we introduce BleedOrigin-Bench, the first comprehensive ESD bleeding source dataset, featuring 1,771 expert-annotated bleeding sources across 106,222 frames from 44 procedures, supplemented with 39,755 pseudo-labeled frames. This benchmark covers 8 anatomical sites and 6 challenging clinical scenarios.
+            We also present BleedOrigin-Net, a novel dual-stage detection-tracking framework for bleeding source localization in ESD procedures, addressing the complete workflow from bleeding onset detection to continuous spatial tracking. For initial detection, our method integrates a Multi-Domain Confidence-based Frame Memory (MDCFM) module that leverages RGB, HSV, and optical flow features for robust temporal context, combined with Multi-Domain Gated Attention (MDG) for superior onset detection. For continuous tracking, we employ a pseudo-label enhanced strategy that incorporates feature matching, trajectory prediction, and Kalman filtering to generate dense supervision from sparse annotations, complemented by parameter-efficient LoRA fine-tuning.          
+            We compare our approach with widely-used object detection models (YOLOv11/v12), multimodal large language models, and point tracking methods. Extensive evaluation demonstrates state-of-the-art performance, achieving: 96.85% frame-level accuracy (± ≤ 8 frames) for bleeding onset detection；70.24% pixel-level accuracy (≤ 100 px) for initial source detection；96.11% pixel-level accuracy (≤ 100 px) for point tracking.          </p>
         </div>
       </div>
     </div>
@@ -259,10 +261,7 @@
           <img src="static/paper_image/motivation_method.png" alt="Motivation and Method Overview">
         </figure>
         <p class="mt-4 is-size-6 has-text-grey-dark">
-          Intraoperative bleeding during Endoscopic Submucosal Dissection (ESD) poses significant risks, demanding precise, real-time localization and continuous monitoring of the bleeding source for effective hemostatic intervention. Current computational methods primarily focus on bleeding region segmentation, overlooking the critical need for accurate bleeding source detection and temporal tracking in the challenging ESD environment, which is marked by frequent visual obstructions and dynamic scene changes. This gap is further widened by the lack of specialized datasets, hindering the development of robust AI-assisted guidance systems.
-          To address these challenges, we introduce BleedOrigin-Bench, the first comprehensive ESD bleeding source dataset, featuring 1,771 expert-annotated bleeding sources across 106,222 frames from 44 procedures, supplemented with 39,755 pseudo-labeled frames. This benchmark covers 8 anatomical sites and 6 challenging clinical scenarios.
-          We also present BleedOrigin-Net, a novel dual-stage detection-tracking framework for bleeding source localization in ESD procedures, addressing the complete workflow from bleeding onset detection to continuous spatial tracking. For initial detection, our method integrates a Multi-Domain Confidence-based Frame Memory (MDCFM) module that leverages RGB, HSV, and optical flow features for robust temporal context, combined with Multi-Domain Gated Attention (MDG) for superior onset detection. For continuous tracking, we employ a pseudo-label enhanced strategy that incorporates feature matching, trajectory prediction, and Kalman filtering to generate dense supervision from sparse annotations, complemented by parameter-efficient LoRA fine-tuning.          
-          We compare our approach with widely-used object detection models (YOLOv11/v12), multimodal large language models, and point tracking methods. Extensive evaluation demonstrates state-of-the-art performance, achieving: 96.85% frame-level accuracy (± ≤ 8 frames) for bleeding onset detection；70.24% pixel-level accuracy (≤ 100 px) for initial source detection；96.11% pixel-level accuracy (≤ 100 px) for point tracking.
+          Overview of the Motivation and Methodology. (A) Motivation: persistent bleeding obscures the surgical field, necessitating repeated flushing to achieve transient exposure of bleeding sources. This iterative process significantly reduces surgical efficiency, prolongs procedure time, and elevates patient risks, including perforation. A demonstration of this issue is available in our supplementary video. (B) The proposed method identifies the initial bleeding source and maintains robust real-time tracking under dynamic visual challenges, ensuring continuous localization until successful hemostasis.
         </p>
       </div>
     </div>
